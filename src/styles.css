@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  height: 100vh;
+  width: 90%;
+  margin: 20px auto;
+  cursor: default;
+  color: #999;
+}
+
+.App h1 {
+  height: 10vh;
+  letter-spacing: 10px;
+  font-size: 2.5em;
+  font-style: italic;
+  color: #777;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "a b c" "d e f";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 1fr 1fr 1fr;
+  width: 50%;
+  margin: 0 auto 10px auto;
+}
+
+.label {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.label:hover {
+  background-color: #f3f3f3;
+}
+
+.label:active {
+  background-color: #999;
+}
+
+.video-container {
+  margin: 10px auto;
+}
+
+.video-container h3 {
+  padding: 5px;
+}
+
+lite-youtube {
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 461px) {
+  .App {
+    width: fit-content;
+  }
+}
+
+.grid-container input[type="radio"] {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  outline: none;
+  box-shadow: 0 0 5px #999;
+  transition: box-shadow 0.3s ease;
+}
+
+.grid-container input[type="radio"]:before {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 60%;
+  margin: 20% auto;
+  border-radius: 50%;
+}
+
+.grid-container input[type="radio"]:checked:before {
+  background: #999;
+}
